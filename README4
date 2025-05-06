@@ -1,0 +1,5 @@
+En küçük kareler yöntemini kullanarak manuel olarak eğitilmiş bir regresyon modeli ile Scikit-learn alt yapısını kullanan model arasında yapılan karşılaştırmada, iki modelin ortalama kare hatası (MSE) değerleri sırasıyla 0.4596 ve 0.4610 olarak hesaplanmıştır. 
+Her iki modelin MSE değerinin birbirine çok yakın olması, her iki modelin de veriyi oldukça iyi tanıdığını belirtir. 
+Manuel model, kapalı form çözümünü (normal denklemler) kullanırken doğrudan yaptı; Scikit-learn modeli ise optimizasyon yapılmış bir kütüphane fonksiyonudur. 
+Küçük farklılıklar arasındaki sebepler veri bölme, yuvarlama hataları ve optimizasyon detaylarıdır. 
+Temel matematiğin doğru kurulmuş olması, manuel yöntemlerle de endüstri standart kütüphaneler kadar etkili sonuçlar alınmasını sağlar.

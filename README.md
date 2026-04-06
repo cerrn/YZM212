@@ -1,15 +1,52 @@
-#MLE ile Akıllı Şehir Planlaması Trafik Yoğunluk Analizi
-Bu proje, YZM212 Makine Öğrenmesi dersi 2. laboratuvar ödevi kapsamında hazırlanmıştır. Projede, bir caddeden geçen araç sayısının Poisson Dağılımı kullanılarak modellenmesi ve en uygun yoğunluk parametresinin lambda Maksimum Olabilirlik Kestirimi (MLE) yöntemiyle hesaplanması hedeflenmektedir. 
-#Problem Tanımı 
-Şehir planlama süreçlerinde trafik yoğunluğunu doğru tahmin etmek hayati önem taşır. Bu çalışmada, bir dakikada geçen araç sayıları üzerinden aşağıdaki sorulara yanıt aranmıştır:
-Gözlemlenen veriler ışığında en olası trafik yoğunluk parametresi lambda nedir? Teorik çözümler ile sayısal kodlama sonuçları birbiriyle örtüşmekte midir? Model, gerçek verilerle ne kadar uyumludur? 
-#Veri Seti 
-Çalışmada kullanılan trafik verisi, bir dakikalık aralıklarla yapılan 14 farklı gözlemden oluşmaktadır: 
-[12, 15, 10, 8, 14, 11, 13, 16, 9, 12, 11, 14, 10, 15] 
-#Yöntem 
-  Analitik Çözüm: Poisson olasılık fonksiyonu kullanılarak Likelihood ve Log-Likelihood fonksiyonları türetilmiştir. Fonksiyonun türevi alınarak hat{lambda}MLE değerinin verilerin aritmetik ortalamasına eşit olduğu kanıtlanmıştır. 
-  Sayısal Optimizasyon: Python'da scipy.optimize kütüphanesi kullanılarak Negatif Log-Olabilirlik (NLL) fonksiyonu minimize edilmiş ve sayısal olarak en iyi parametre bulunmuştur.     
-  Görselleştirme: Elde edilen model ile gerçek verilerin histogramı karşılaştırılarak modelin başarısı görselleştirilmiştir. 
-#Sonuçlar ve Yorumlar 
-  Analitik ve Sayısal Uyum: Yapılan hesaplamalar sonucunda aritmetik ortalama ile optimizasyon çıktısının birbirine tam uyum sağladığı görülmüştür. 
-    Aykırı Değer Etkisi: MLE yönteminin uç değerlere karşı hassas olduğu saptanmıştır. Veri setine eklenecek hatalı bir "200" gözlemi, ortalamayı yukarı çekerek belediyenin yanlış ( kararlar almasına sebebiyet verebilir.
+# YZM212 Makine Öğrenmesi – Laboratuvar Ödevleri
+
+Bu depo, **YZM212 Makine Öğrenmesi** dersi kapsamında yapılan laboratuvar ödevlerini içermektedir.
+
+## Depo Yapısı
+
+```
+├── 1.naiveBayes/
+│   ├── gaussianNaiveBayesScikitLearn.ipynb
+│   ├── naiveBayes.ipynb
+│   └── Readme.MD
+│
+├── 2.LogisticRegression/
+│   ├── LogisticRegressionScikitLearn.ipynb
+│   ├── logisticRegressionBayes.ipynb
+│   └── Readme.MD
+│
+├── 3.EigenVectorsValues/
+│   ├── EigenVectorsValues.ipynb
+│   └── Readme.MD
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
+
+## Ödevler
+
+### 1. Naive Bayes
+Gaussian Naive Bayes sınıflandırıcısının hem sıfırdan hem de Scikit-learn ile uygulanması.
+
+### 2. Lojistik Regresyon
+Lojistik regresyon modelinin Scikit-learn ve Bayes yaklaşımıyla karşılaştırmalı uygulaması.
+
+### 3. Özdeğer ve Özvektörler
+QR algoritması ile manuel özdeğer/özvektör hesaplama ve NumPy `linalg.eig` ile karşılaştırma.
+
+## Kurulum
+
+```bash
+git clone <repo-url>
+cd <repo-adı>
+pip install -r requirements.txt
+```
+
+## Gereksinimler
+
+Tüm bağımlılıklar `requirements.txt` dosyasında listelenmiştir.
+
+## Lisans
+
+Bu depo eğitim amaçlıdır.
